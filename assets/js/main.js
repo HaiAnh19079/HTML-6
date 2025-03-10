@@ -3,16 +3,6 @@ var playButton = document.getElementById("play_button");
 var intro_vd = document.querySelector(".intro-video");
 
 
-// var isOpacity = playButton.style.opacity = '0'
-// console.log(isOpacity);
-// if (isOpacity) {
-//     playButton.addEventListener('mouseover', () => {
-//         playButton.style.opacity = '0.5'
-//     })
-//     playButton.addEventListener('mouseout', () => {
-//         playButton.style.opacity = '0'
-//     })
-// }
 playButton.addEventListener("click", function () {
     if (video.paused == true) {
         video.play();
@@ -65,6 +55,7 @@ function currentSlideFeedback(n) {
 }
 currentSlideFeedback(slideIndex)
 //
+
 
 
 function showSlides(n, slides, list) {
@@ -129,3 +120,16 @@ function setupGallery() {
 // Gọi khi load trang & khi thay đổi kích thước
 setupGallery();
 window.addEventListener("resize", setupGallery);
+
+// specialties
+function currentSlideSpecialities(slideIndex) {
+    let slides = document.querySelectorAll(".special-slide");
+    let list = document.querySelector('.special-list > .row.row-cols-1.row-cols-lg-3')
+    let dotsContainer = document.querySelector('.special-inner .dots')
+
+    console.log(slides);
+    let slidesPerPage = 1;
+    generateDots(dotsContainer, slides, list, slidesPerPage);
+    showSlides(n, slides, list);
+}
+currentSlideSpecialities(slideIndex)

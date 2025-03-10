@@ -21,11 +21,11 @@
         <!-- Styles -->
         <link rel="stylesheet" href="./assets/css/reset.css" />
         <link rel="stylesheet" href="./assets/css/grid.css" />
-        <link rel="stylesheet" href="./assets/css/responsive.css" />
         <link rel="stylesheet" href="./assets/css/styles.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
     </head>
     <body>
-        <header class="header fixed">
+        <header class="header fixed hide-on-mobile">
             <div class="container">
                 <div class="row">
                     <div class="header-inner">
@@ -87,10 +87,40 @@
                 </div>
             </div>
         </header>
+
+        <!-- mobile-header -->
+        <header class="header show-on-mobile">
+            <div class="container">
+                <div class="header-inner">
+                    <div class="logo">
+                        <a href="#!">
+                            <img
+                                src="./assets/icons/mobile-header-logo.svg"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+
+                    <div class="header-right">
+                        <div class="header-link">
+                            <p class="email-icon">
+                                <img
+                                    src="./assets/icons/mobile-header-letter-icon.svg"
+                                    alt=""
+                                />
+                            </p>
+                            <p class="bar-icon">
+                                <img src="./assets/icons/bar-icon.svg" alt="" />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
         <main class="main" style="">
             <!-- hero -->
             <section class="hero">
-                <div class="hero-container">
+                <div class="container">
                     <div class="row row-cols-1 row-cols-lg-2">
                         <div class="col">
                             <div class="hero-media">
@@ -164,7 +194,7 @@
                                 <img
                                     src="./assets/imgs/hero-background-img-02.png"
                                     alt=""
-                                    class="hero-img__decor-02"
+                                    class="hero-img__decor-02 hide-on-mobile"
                                 />
                             </div>
                         </div>
@@ -177,7 +207,9 @@
                 <div class="container">
                     <div class="client-inner">
                         <h2 class="section-title client-title">
-                            Meet my recent clients
+                            Meet my
+                            <br class="show-on-mobile" />
+                            recent clients
                         </h2>
 
                         <div class="client-list">
@@ -286,7 +318,7 @@
                             <div class="row row-cols-1 row-cols-lg-3">
                                 <!-- item-1 -->
                                 <div class="col">
-                                    <article class="special-item">
+                                    <article class="special-item special-slide">
                                         <figure class="special-item__wrap-icon">
                                             <img
                                                 src="./assets/icons/light.png"
@@ -307,7 +339,7 @@
 
                                 <!-- item-2 -->
                                 <div class="col">
-                                    <article class="special-item">
+                                    <article class="special-item special-slide">
                                         <figure class="special-item__wrap-icon">
                                             <img
                                                 src="./assets/icons/pencil&ruler.png"
@@ -328,7 +360,7 @@
 
                                 <!-- item-3 -->
                                 <div class="col">
-                                    <article class="special-item">
+                                    <article class="special-item special-slide">
                                         <figure class="special-item__wrap-icon">
                                             <img
                                                 src="./assets/icons/phone.png"
@@ -348,6 +380,7 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="dots show-on-mobile"></div>
                     </div>
                 </div>
             </section>
@@ -380,7 +413,9 @@
                                             <h3 class="project-item__title">
                                                 Wally Website
                                             </h3>
-                                            <p class="project-item__desc">
+                                            <p
+                                                class="project-item__desc line-clamp line-3 break-word"
+                                            >
                                                 Lorem ipsum dolor amet,
                                                 consectetur adipiscing st elit.
                                             </p>
@@ -406,7 +441,9 @@
                                             <h3 class="project-item__title">
                                                 Banking App
                                             </h3>
-                                            <p class="project-item__desc">
+                                            <p
+                                                class="project-item__desc line-clamp line-3 break-word"
+                                            >
                                                 Lorem ipsum dolor amet,
                                                 consectetur adipiscing st elit.
                                             </p>
@@ -432,7 +469,9 @@
                                             <h3 class="project-item__title">
                                                 Web App
                                             </h3>
-                                            <p class="project-item__desc">
+                                            <p
+                                                class="project-item__desc line-clamp line-3 break-word"
+                                            >
                                                 Lorem ipsum dolor amet,
                                                 consectetur adipiscing st elit.
                                             </p>
@@ -458,7 +497,9 @@
                                             <h3 class="project-item__title">
                                                 Oculus Website
                                             </h3>
-                                            <p class="project-item__desc">
+                                            <p
+                                                class="project-item__desc line-clamp line-3 break-word"
+                                            >
                                                 Lorem ipsum dolor amet,
                                                 consectetur adipiscing st elit.
                                             </p>
@@ -508,7 +549,7 @@
                         </p>
 
                         <div class="row">
-                            <div class="col-10 col-lg-10 offset-1 offset-lg-1">
+                            <div class="col-12 col-lg-10 offset-lg-1">
                                 <div class="row about-statistics">
                                     <div class="col-4">
                                         <div class="statistic-item">
@@ -694,9 +735,9 @@
                             </div>
                         </div>
                         <div class="dots">
-                            <span class="dot active"></span>
+                            <!-- <span class="dot active"></span>
                             <span class="dot"></span>
-                            <span class="dot"></span>
+                            <span class="dot"></span> -->
                         </div>
                     </div>
                 </div>
@@ -952,121 +993,117 @@
             <!-- gallery -->
             <section class="gallery">
                 <div class="container">
-                    <div class="row">
-                        <div class="gallery-inner">
-                            <h2 class="section-title gallery-title">
-                                My atmosphere
-                            </h2>
-                            <p class="section-desc gallery-desc">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. In urna, non nisl tincidunt ut
-                                elementum turpis.
-                            </p>
-                            <a href="#!" class="gallery-link">
-                                @interaction_arif
-                            </a>
+                    <div class="gallery-inner">
+                        <h2 class="section-title gallery-title">
+                            My atmosphere
+                        </h2>
+                        <p class="section-desc gallery-desc">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. In urna, non nisl tincidunt ut elementum
+                            turpis.
+                        </p>
+                        <a href="#!" class="gallery-link">
+                            @interaction_arif
+                        </a>
 
-                            <div class="gallery-list">
-                                <div
-                                    class="row row-cols-1 row-cols-lg-3 nowrap"
-                                >
-                                    <!-- 1 -->
-                                    <div class="col-12 col-lg-4 gallery-slide">
-                                        <figure class="gallery-item__wrap-img">
-                                            <img
-                                                src="./assets/imgs/gallery-img-01.jpg"
-                                                alt=""
-                                                class="gallery-img"
-                                            />
-                                        </figure>
-                                    </div>
+                        <div class="gallery-list">
+                            <div class="row row-cols-1 row-cols-lg-3 nowrap">
+                                <!-- 1 -->
+                                <div class="col-12 col-lg-4 gallery-slide">
+                                    <figure class="gallery-item__wrap-img">
+                                        <img
+                                            src="./assets/imgs/gallery-img-01.jpg"
+                                            alt=""
+                                            class="gallery-img"
+                                        />
+                                    </figure>
+                                </div>
 
-                                    <div class="col-12 col-lg-4 gallery-slide">
-                                        <figure class="gallery-item__wrap-img">
-                                            <img
-                                                src="./assets/imgs/gallery-img-02.jpg"
-                                                alt=""
-                                                class="gallery-img"
-                                            />
-                                        </figure>
-                                    </div>
+                                <div class="col-12 col-lg-4 gallery-slide">
+                                    <figure class="gallery-item__wrap-img">
+                                        <img
+                                            src="./assets/imgs/gallery-img-02.jpg"
+                                            alt=""
+                                            class="gallery-img"
+                                        />
+                                    </figure>
+                                </div>
 
-                                    <div class="col-12 col-lg-4 gallery-slide">
-                                        <figure class="gallery-item__wrap-img">
-                                            <img
-                                                src="./assets/imgs/gallery-img-03.jpg"
-                                                alt=""
-                                                class="gallery-img"
-                                            />
-                                        </figure>
-                                    </div>
-                                    <!-- 2 -->
-                                    <div class="col-12 col-lg-4 gallery-slide">
-                                        <figure class="gallery-item__wrap-img">
-                                            <img
-                                                src="./assets/imgs/gallery-img-01.jpg"
-                                                alt=""
-                                                class="gallery-img"
-                                            />
-                                        </figure>
-                                    </div>
+                                <div class="col-12 col-lg-4 gallery-slide">
+                                    <figure class="gallery-item__wrap-img">
+                                        <img
+                                            src="./assets/imgs/gallery-img-03.jpg"
+                                            alt=""
+                                            class="gallery-img"
+                                        />
+                                    </figure>
+                                </div>
+                                <!-- 2 -->
+                                <div class="col-12 col-lg-4 gallery-slide">
+                                    <figure class="gallery-item__wrap-img">
+                                        <img
+                                            src="./assets/imgs/gallery-img-01.jpg"
+                                            alt=""
+                                            class="gallery-img"
+                                        />
+                                    </figure>
+                                </div>
 
-                                    <div class="col-12 col-lg-4 gallery-slide">
-                                        <figure class="gallery-item__wrap-img">
-                                            <img
-                                                src="./assets/imgs/gallery-img-02.jpg"
-                                                alt=""
-                                                class="gallery-img"
-                                            />
-                                        </figure>
-                                    </div>
+                                <div class="col-12 col-lg-4 gallery-slide">
+                                    <figure class="gallery-item__wrap-img">
+                                        <img
+                                            src="./assets/imgs/gallery-img-02.jpg"
+                                            alt=""
+                                            class="gallery-img"
+                                        />
+                                    </figure>
+                                </div>
 
-                                    <div class="col-12 col-lg-4 gallery-slide">
-                                        <figure class="gallery-item__wrap-img">
-                                            <img
-                                                src="./assets/imgs/gallery-img-03.jpg"
-                                                alt=""
-                                                class="gallery-img"
-                                            />
-                                        </figure>
-                                    </div>
-                                    <!-- 3 -->
-                                    <div class="col-12 col-lg-4 gallery-slide">
-                                        <figure class="gallery-item__wrap-img">
-                                            <img
-                                                src="./assets/imgs/gallery-img-01.jpg"
-                                                alt=""
-                                                class="gallery-img"
-                                            />
-                                        </figure>
-                                    </div>
+                                <div class="col-12 col-lg-4 gallery-slide">
+                                    <figure class="gallery-item__wrap-img">
+                                        <img
+                                            src="./assets/imgs/gallery-img-03.jpg"
+                                            alt=""
+                                            class="gallery-img"
+                                        />
+                                    </figure>
+                                </div>
+                                <!-- 3 -->
+                                <div class="col-12 col-lg-4 gallery-slide">
+                                    <figure class="gallery-item__wrap-img">
+                                        <img
+                                            src="./assets/imgs/gallery-img-01.jpg"
+                                            alt=""
+                                            class="gallery-img"
+                                        />
+                                    </figure>
+                                </div>
 
-                                    <div class="col-12 col-lg-4 gallery-slide">
-                                        <figure class="gallery-item__wrap-img">
-                                            <img
-                                                src="./assets/imgs/gallery-img-02.jpg"
-                                                alt=""
-                                                class="gallery-img"
-                                            />
-                                        </figure>
-                                    </div>
+                                <div class="col-12 col-lg-4 gallery-slide">
+                                    <figure class="gallery-item__wrap-img">
+                                        <img
+                                            src="./assets/imgs/gallery-img-02.jpg"
+                                            alt=""
+                                            class="gallery-img"
+                                        />
+                                    </figure>
+                                </div>
 
-                                    <div class="col-12 col-lg-4 gallery-slide">
-                                        <figure class="gallery-item__wrap-img">
-                                            <img
-                                                src="./assets/imgs/gallery-img-03.jpg"
-                                                alt=""
-                                                class="gallery-img"
-                                            />
-                                        </figure>
-                                    </div>
+                                <div class="col-12 col-lg-4 gallery-slide">
+                                    <figure class="gallery-item__wrap-img">
+                                        <img
+                                            src="./assets/imgs/gallery-img-03.jpg"
+                                            alt=""
+                                            class="gallery-img"
+                                        />
+                                    </figure>
                                 </div>
                             </div>
-                            <div class="dots">
-                                <div class="dot active"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                            </div>
+                        </div>
+                        <div class="dots">
+                            <div class="dot active"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
                         </div>
                     </div>
                 </div>
@@ -1117,7 +1154,7 @@
                 </div>
             </section>
         </main>
-        <footer class="footer">
+        <!-- <footer class="footer">
             <div class="container">
                 <div class="row">
                     <div class="header-inner">
@@ -1187,7 +1224,7 @@
                     <span>Terms of Conditions</span>
                 </div>
             </div>
-        </footer>
+        </footer> -->
 
         <!-- AOS -->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
