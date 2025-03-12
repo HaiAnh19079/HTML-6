@@ -25,10 +25,25 @@
         <link rel="stylesheet" href="./assets/css/responsive.css" />
     </head>
     <body>
+        <!-- PC header -->
         <header class="header fixed hide-on-mobile">
             <div class="container">
                 <div class="row">
                     <div class="header-inner">
+                        <!-- Tablet/Mobile menu -->
+                        <label for="menu-checkbox" class="toggle-menu">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512"
+                            >
+                                <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                <path
+                                    fill="currentColor"
+                                    d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                                />
+                            </svg>
+                        </label>
+
                         <div class="header-left">
                             <div class="header-link">
                                 <p class="email-icon">
@@ -37,6 +52,7 @@
                                         alt=""
                                     />
                                 </p>
+
                                 <a
                                     href="mailto:hi@gmail.com"
                                     class="email-address"
@@ -48,12 +64,7 @@
 
                         <div class="logo">
                             <a href="#!">
-                                <img
-                                    width="100px"
-                                    height="100px"
-                                    src="./assets/imgs/logo.png"
-                                    alt=""
-                                />
+                                <img src="./assets/imgs/logo.png" alt="" />
                             </a>
                         </div>
 
@@ -88,9 +99,16 @@
             </div>
         </header>
 
-        <!-- mobile-header -->
-        <header class="header show-on-mobile">
-            <div class="container">
+        <!-- Tablet/Mobile header -->
+        <header class="mobile-header">
+            <input
+                type="checkbox"
+                name=""
+                id="menu-checkbox"
+                class="menu-checkbox"
+                hidden
+            />
+            <div class="container show-on-mobile">
                 <div class="header-inner">
                     <div class="logo">
                         <a href="#!">
@@ -109,15 +127,60 @@
                                     alt=""
                                 />
                             </p>
-                            <p class="bar-icon">
+                            <label for="menu-checkbox" class="bar-icon">
                                 <img src="./assets/icons/bar-icon.svg" alt="" />
-                            </p>
+                            </label>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- menu-overlay -->
+            <label for="menu-checkbox" class="menu-overlay"></label>
+
+            <!-- menu-content -->
+            <div class="menu-drawer">
+                <label for="menu-checkbox">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 384 512"
+                    >
+                        <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                        <path
+                            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                        />
+                    </svg>
+                </label>
+
+                <div class="menu-content">
+                    <div class="menu-inner">
+                        <div class="menu-logo">
+                            <a href="#!">
+                                <img
+                                    src="./assets/icons/mobile-header-logo.svg"
+                                    alt=""
+                                />
+                            </a>
+                        </div>
+
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link"> Projects </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link"> Journey </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link"> Service </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link"> Contact </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </header>
-        <main class="main" style="">
+        <main class="main">
             <!-- hero -->
             <section class="hero">
                 <div class="container">
@@ -315,7 +378,9 @@
                             turpis.
                         </p>
                         <div class="special-list">
-                            <div class="row row-cols-1 row-cols-lg-3">
+                            <div
+                                class="row row-cols-1 row-cols-md-2 row-cols-lg-3"
+                            >
                                 <!-- item-1 -->
                                 <div class="col">
                                     <article class="special-item special-slide">
@@ -734,11 +799,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="dots">
-                            <!-- <span class="dot active"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span> -->
-                        </div>
+                        <div class="dots"></div>
                     </div>
                 </div>
                 <div class="feedback-decor">
@@ -766,7 +827,7 @@
                         <div class="question-list">
                             <div class="row row-cols-1">
                                 <!-- quest 1 -->
-                                <div class="col-10">
+                                <div class="col-12 col-lg-10">
                                     <div class="question-item">
                                         <input
                                             type="checkbox"
@@ -811,7 +872,7 @@
                                     </div>
                                 </div>
                                 <!-- quest 2 -->
-                                <div class="col-10">
+                                <div class="col-12 col-lg-10">
                                     <div class="question-item">
                                         <input
                                             type="checkbox"
@@ -856,7 +917,7 @@
                                     </div>
                                 </div>
                                 <!-- quest 3 -->
-                                <div class="col-10">
+                                <div class="col-12 col-lg-10">
                                     <div class="question-item">
                                         <input
                                             type="checkbox"
@@ -899,7 +960,7 @@
                                     </div>
                                 </div>
                                 <!-- quest 4 -->
-                                <div class="col-10">
+                                <div class="col-12 col-lg-10">
                                     <div class="question-item">
                                         <input
                                             type="checkbox"
@@ -942,7 +1003,7 @@
                                     </div>
                                 </div>
                                 <!-- quest 5 -->
-                                <div class="col-10">
+                                <div class="col-12 col-lg-10">
                                     <div class="question-item">
                                         <input
                                             type="checkbox"
@@ -1111,20 +1172,19 @@
 
             <!-- cta -->
             <section class="cta">
-                <div class="container" style="--spacer: 0">
+                <div class="container">
                     <div class="cta-inner">
-                        <figure>
+                        <figure class="cta-img--wrap">
                             <img
                                 src="./assets/imgs/cta-img.png"
                                 alt=""
                                 class="cta-img"
-                                width="90px"
-                                height="90px"
                             />
                         </figure>
 
                         <h2 class="section-title cta-title">
-                            Got a project? Let’s talk
+                            Got a project?<br class="show-on-mobile" />
+                            Let’s talk
                         </h2>
                         <p class="section-desc cta-desc">
                             Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -1154,7 +1214,7 @@
                 </div>
             </section>
         </main>
-        <!-- <footer class="footer">
+        <footer class="footer hide-on-mobile">
             <div class="container">
                 <div class="row">
                     <div class="header-inner">
@@ -1224,7 +1284,78 @@
                     <span>Terms of Conditions</span>
                 </div>
             </div>
-        </footer> -->
+        </footer>
+        <!-- mobile-header -->
+        <footer class="header show-on-mobile">
+            <div class="container">
+                <div class="row">
+                    <div class="header-inner">
+                        <div class="logo">
+                            <a href="#!">
+                                <img
+                                    width="100px"
+                                    height="100px"
+                                    src="./assets/imgs/logo.png"
+                                    alt=""
+                                />
+                            </a>
+                        </div>
+                        <div class="header-right">
+                            <div class="navbar">
+                                <ul class="nav-list">
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link">
+                                            Projects
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link">
+                                            Journey
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link">
+                                            Service
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link">
+                                            Contact
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header-left">
+                            <div class="header-link">
+                                <p class="email-icon">
+                                    <img
+                                        src="./assets/icons/header-letter-icon.svg"
+                                        alt=""
+                                    />
+                                </p>
+                                <a
+                                    href="mailto:hi@gmail.com"
+                                    class="email-address"
+                                >
+                                    hi@arif.interactive
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <div style="display: flex; align-items: center">
+                    <span>Privacy Policy</span>
+                    <span class="separate-vertical"></span>
+                    <span>Terms of Conditions</span>
+                </div>
+                <div class="separate"></div>
+                <span>©interactiveArif 2021. All rights reserved.</span>
+            </div>
+        </footer>
 
         <!-- AOS -->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

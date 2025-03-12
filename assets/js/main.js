@@ -8,19 +8,21 @@ playButton.addEventListener("click", function () {
         video.play();
         playButton.style.opacity = '0'
         intro_vd.style.opacity = '0'
-
+        intro_vd.style.zIndex = '-1'
 
     } else {
         video.pause();
         playButton.style.opacity = '1'
         intro_vd.style.opacity = '1'
-
+        intro_vd.style.zIndex = '1'
     }
 });
 video.addEventListener('play', function () {
     console.log('play');
     playButton.style.opacity = '0'
     intro_vd.style.opacity = '0'
+    intro_vd.style.zIndex = '-1'
+
     playButton.addEventListener('mouseout', () => {
         playButton.style.opacity = '0'
     })
@@ -32,6 +34,8 @@ video.addEventListener('pause', function () {
     console.log('pause');
     playButton.style.opacity = '1'
     intro_vd.style.opacity = '1'
+    intro_vd.style.zIndex = '1'
+
     playButton.addEventListener('mouseout', () => {
         playButton.style.opacity = '1'
     })
@@ -48,7 +52,6 @@ function currentSlideFeedback(n) {
     let list = document.querySelector('.feedback-list > .row.row-cols-1.nowrap')
     let dotsContainer = document.querySelector('.feedback-inner .dots')
 
-    console.log(slides);
     let slidesPerPage = 1;
     generateDots(dotsContainer, slides, list, slidesPerPage);
     showSlides(n, slides, list);
@@ -127,9 +130,8 @@ function currentSlideSpecialities(slideIndex) {
     let list = document.querySelector('.special-list > .row.row-cols-1.row-cols-lg-3')
     let dotsContainer = document.querySelector('.special-inner .dots')
 
-    console.log(slides);
     let slidesPerPage = 1;
     generateDots(dotsContainer, slides, list, slidesPerPage);
-    showSlides(n, slides, list);
+    showSlides(slideIndex, slides, list);
 }
 currentSlideSpecialities(slideIndex)
