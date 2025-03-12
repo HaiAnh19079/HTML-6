@@ -610,7 +610,10 @@
         margin-top: 58px;
         width: auto;
     }
-
+    footer .logo a img {
+        width: 100px;
+        height: 100px;
+    }
     .copyright {
         display: flex;
         justify-content: center;
