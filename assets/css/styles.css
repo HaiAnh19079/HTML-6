@@ -149,12 +149,12 @@ button {
 .header.fixed,
 .mobile-header.fixed {
     position: sticky;
-    top: 0;
+    top: -1px;
     width: 100%;
     z-index: 10;
     transition: top 0.3s, background-color 0.3s, padding-bottom 0.3s ease;
     border-bottom: 1px solid #e8ebed;
-    background: #eee;
+    background: #fbfaff;
 }
 
 .header-inner {
@@ -232,12 +232,39 @@ button {
 }
 
 .nav-link {
+    position: relative;
     color: var(--text-desc-color);
     font-size: 1.8rem;
     font-weight: 400;
     line-height: normal;
 }
+.nav-link::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 0;
+    height: 1px;
+    border-radius: 0.5px;
+    background: #5d3bee;
+    transition: width 0.3s ease, left 0.3s ease;
+}
 
+.nav-link:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.nav-link:not(.active):hover,
+.nav-link.active {
+    color: #212832;
+    text-shadow: 0.2px 0 0 currentColor;
+}
+
+.nav-link.active::before {
+    width: 100%;
+    left: 0%;
+}
 /* Hero */
 
 .hero {
@@ -1089,7 +1116,7 @@ button {
 .footer .copyright {
     display: flex;
     justify-content: space-around;
-    margin-top: 18px;
+    margin: 18px 0;
 }
 
 .copyright span {

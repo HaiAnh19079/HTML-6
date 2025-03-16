@@ -12,7 +12,7 @@
         --column-size: 12;
         --spacer: 0;
 
-        max-width: 100%;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
         padding-left: calc(var(--spacer) / 2);
@@ -76,12 +76,11 @@
 
     .mobile-header.fixed {
         position: sticky;
-        top: 0;
+        top: -1px;
         width: 100%;
         z-index: 2;
         transition: none;
         border-bottom: none;
-        background: #eee;
     }
 
     /* hero */
@@ -197,6 +196,10 @@
     .project-title {
         width: 100%;
     }
+
+    .video-btn {
+        display: none;
+    }
 }
 
 /* Tablet */
@@ -289,7 +292,7 @@
     }
 
     .logo a img {
-        width: auto;
+        width: 100%;
         height: auto;
     }
 
