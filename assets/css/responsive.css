@@ -74,6 +74,16 @@
         height: 20px;
     }
 
+    .mobile-header.fixed {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+        transition: none;
+        border-bottom: none;
+        background: #eee;
+    }
+
     /* hero */
     .hero {
         padding-top: 50.5px;
