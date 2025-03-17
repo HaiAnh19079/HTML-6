@@ -22,12 +22,7 @@
 
 /* Tablet & Mobile */
 @media screen and (max-width: 991.98px) {
-    /* .header .container {
-        --spacer: 20px;
-    } */
-    body {
-        max-width: 100%;
-    }
+    
     .container {
         --spacer: 40px;
     }

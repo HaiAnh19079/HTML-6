@@ -43,6 +43,8 @@ video.addEventListener('pause', function () {
         playButton.style.opacity = '1'
     })
 })
+
+
 let slideIndex = 1;
 
 //slide feedback
@@ -58,8 +60,6 @@ function currentSlideFeedback(n) {
 }
 currentSlideFeedback(slideIndex)
 //
-
-
 
 function showSlides(n, slides, list) {
 
@@ -134,4 +134,6 @@ function currentSlideSpecialities(slideIndex) {
     generateDots(dotsContainer, slides, list, slidesPerPage);
     showSlides(slideIndex, slides, list);
 }
+
 currentSlideSpecialities(slideIndex)
+
